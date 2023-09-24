@@ -32,7 +32,7 @@ class MarkovMachine {
 
   /** return random text from chains */
 
-  makeText(numWords = 8) {
+  makeText(numWords = 100) {
     let allKeys = Array.from(this.chains.keys());
     let randKey = MarkovMachine.choice(allKeys);
     let arr = [];
@@ -44,9 +44,7 @@ class MarkovMachine {
 
     return arr.join(" ");
   }
-  
 }
-
 
 module.exports = {
   MarkovMachine,
